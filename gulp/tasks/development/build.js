@@ -6,11 +6,11 @@ gulp.task('build', function(callback){
     runSequence('delete',
     [
         'jekyll',
-        'sass',
+        /*'sass',
         'scripts',
         'images',
-        'copy:fonts'
+        'copy:fonts'*/
     ],
-    'base64',
+    //'base64',
     callback);
 });
