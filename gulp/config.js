@@ -20,6 +20,12 @@ module.exports = {
                 developmentAssets + '/images/**',
                 developmentAssets + '/fonts/*',
             ]
+        },
+        production: {
+            server: {
+                baseDir: [production]
+            },
+            port: 9998
         }
     },
     delete: {
