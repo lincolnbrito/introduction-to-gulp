@@ -9,8 +9,8 @@ gulp.task('build', function(callback){
         'sass',
         //'scripts', // @todo create this task, skipped in tutorial
         'images',
-        /*'copy:fonts'*/
+        //'copy:fonts' // @todo create this task, skipped in tutorial
     ],
-    //'base64',
+    //'base64', //@todo create this task, skipped in tutorial
     callback);
 });
