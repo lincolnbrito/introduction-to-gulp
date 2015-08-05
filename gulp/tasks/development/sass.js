@@ -1,7 +1,7 @@
 var gulp         = require('gulp');
+var sass         = require('gulp-sass');
 var plumber      = require('gulp-plumber');
 var browsersync  = require('browser-sync');
-var sass         = require('gulp-ruby-sass');
 var gulpFilter   = require('gulp-filter');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps   = require('gulp-sourcemaps');
@@ -12,7 +12,7 @@ var config       = require('../../config');
  * Build sourcemaps
  */
 gulp.task('sass', function() {
-  var sassConfig = config.sass.options;
+ var sassConfig = config.sass.options;
 
   sassConfig.onError = browsersync.notify;
 
@@ -21,7 +21,9 @@ gulp.task('sass', function() {
 
   browsersync.notify('Compiling Sass');
 
-  return sass(config.sass.src, sassConfig)
+  return gulp.src(config.sass.src)
+    .pipe(plumber())
+    .pipe(sass(sassConfig))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(filter) // Don’t write sourcemaps of sourcemaps
