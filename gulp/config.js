@@ -26,11 +26,11 @@ module.exports = {
         src: [developmentAssets]
     },
     jekyll: {
-      development: {
-        src:    src,
-        dest:   development,
-        config: '_config.yml'
-      }
+        development: {
+            src:    src,
+            dest:   development,
+            config: '_config.yml'
+        }
     },
     sass: {
 		src:  srcAssets + '/scss/**/*.{sass,scss}',
