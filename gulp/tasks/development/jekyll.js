@@ -3,33 +3,49 @@ var cp          = require('child_process');
 var browsersync = require('browser-sync').create();
 var config      = require('../../../config').jekyll.development;
 
-//var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
-
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll', function(done) {
   browsersync.notify('Compiling Jekyll');
 
-  return cp.spawn('cmd', 
-    [
-        '/c',        
-        'jekyll', 
-        'build', 
-        //'-q', 
-        '-s'+config.src, 
-        '-d'+config.dest, 
-        '-c'+config.src+'/'+config.config
-    ], 
-    { 
-        stdio: 'inherit' 
+    /**
+    * Resolvendo problema no Windows
+    * @see http://matthew-jackson.com/notes/development/node-child_process-enoent-error-windows/
+    */
+    if(process.platform === "win32") {
+        return cp.spawn('cmd', 
+           [
+                '/c',        
+                'jekyll', 
+                'build', 
+                //'-q', 
+                '-s'+config.src, 
+                '-d'+config.dest, 
+                '-c'+config.src+'/'+config.config
+            ], 
+            { 
+                stdio: 'inherit' 
+            }
+        )
+        .on('close', done);
+    }else{
+        return cp.spawn(
+            'bundle', 
+            [
+                'exec', 
+                'jekyll', 
+                'build', 
+                '-q', 
+                '--source=' + config.src, 
+                '--destination=' + config.dest, 
+                '--config=' + config.config
+            ], 
+            { stdio: 'inherit' }
+        )
+        .on('close', done);
     }
-  )
-  .on('close', done);
-
-  /*return cp.spawn('cmd', ['/c','jekyll','build'], { stdio: 'inherit' })
-  .on('close', done)
-  .on('error', function(error){});*/
+  
 });
 
 gulp.task('jekyll-rebuild', ['jekyll'], function() {
