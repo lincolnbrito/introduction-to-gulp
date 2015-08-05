@@ -11,9 +11,25 @@ var config      = require('../../../config').jekyll.development;
 gulp.task('jekyll', function(done) {
   browsersync.notify('Compiling Jekyll');
 
-  return cp.spawn('cmd', ['/c','jekyll','build'], { stdio: 'inherit' })
+  return cp.spawn('cmd', 
+    [
+        '/c',        
+        'jekyll', 
+        'build', 
+        //'-q', 
+        '-s'+config.src, 
+        '-d'+config.dest, 
+        '-c'+config.src+'/'+config.config
+    ], 
+    { 
+        stdio: 'inherit' 
+    }
+  )
+  .on('close', done);
+
+  /*return cp.spawn('cmd', ['/c','jekyll','build'], { stdio: 'inherit' })
   .on('close', done)
-  .on('error', function(error){});
+  .on('error', function(error){});*/
 });
 
 gulp.task('jekyll-rebuild', ['jekyll'], function() {
