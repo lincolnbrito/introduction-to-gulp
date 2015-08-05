@@ -19,7 +19,7 @@ gulp.task('jekyll', function(done) {
                 '/c',        
                 'jekyll', 
                 'build', 
-                //'-q', 
+                '-q', 
                 '-s'+config.src, 
                 '-d'+config.dest, 
                 '-c'+config.src+'/'+config.config
