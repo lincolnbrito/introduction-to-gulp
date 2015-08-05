@@ -10,7 +10,7 @@ gulp.task('jekyll', function(done) {
   browsersync.notify('Compiling Jekyll');
 
     /**
-    * Resolvendo problema no Windows
+    * Resolvendo problema do child_process em reconher comandos no Windows
     * @see http://matthew-jackson.com/notes/development/node-child_process-enoent-error-windows/
     */
     if(process.platform === "win32") {

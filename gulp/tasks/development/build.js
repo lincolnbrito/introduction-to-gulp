@@ -7,7 +7,7 @@ gulp.task('build', function(callback){
     [
         'jekyll',
         'sass',
-        /*'scripts',
+        /*'scripts', // @todo create this task, skipped in tutorial
         'images',
         'copy:fonts'*/
     ],

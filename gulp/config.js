@@ -56,5 +56,9 @@ module.exports = {
 	    'android 4'
 	  ],
 	  cascade: true
-	}
+	},
+    images: {
+        src: srcAssets + '/images/**/*',
+        dest: developmentAssets + '/images'
+    }
 };
