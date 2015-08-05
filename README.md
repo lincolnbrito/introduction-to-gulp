@@ -6,3 +6,6 @@ Gulp.js experiments based on [article series](http://stefanimhoff.de/tag/gulp/) 
 
 If you are a Windows user some problems can occur whe installing BrowserSync. Follows the instructions here: 
 http://www.browsersync.io/docs/#windows-users
+
+# Credits
+- Dev stickers [cerebrobr/adesivos ](https://github.com/cerebrobr/adesivos)
