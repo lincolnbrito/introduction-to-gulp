@@ -60,5 +60,23 @@ module.exports = {
     images: {
         src: srcAssets + '/images/**/*',
         dest: developmentAssets + '/images'
+    },
+    watch: {
+        jekyll: [
+            '_config.yml',
+            '_config.build.yml',
+            src + '/_data/**/*.{json,yml,csv}',
+            src + '/_includes/**/*.{html,xml}',
+            src + '/_layouts/**/*.html',
+            src + '/_plugins/*.rb',
+            src + '/_posts/*.{markdown,md,html}',
+            src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
+            src + '/*'
+        ],
+        sass:    srcAssets + '/scss/**/*.{sass,scss}',
+        scripts: srcAssets + '/javascripts/**/*.js',
+        images:  srcAssets + '/images/**/*',
+        sprites: srcAssets + '/images/**/*.png',
+        svg:     'vectors/*.svg'
     }
 };
