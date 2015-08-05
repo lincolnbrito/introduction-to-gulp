@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -39,14 +37,9 @@ $on-laptop:        800px;
     }
 }
 
-.body{
-	border: 1px solid #000;
-}
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "includes/base",
-        "includes/layout",
-        "includes/syntax-highlighting"
+    "includes/base",
+    "includes/layout",
+    "includes/syntax-highlighting"
 ;
