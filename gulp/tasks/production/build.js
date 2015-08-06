@@ -14,8 +14,8 @@ gulp.task('build:production', function(callback){
         [
             'optimize:css',
             //'optmize:js',
-            'optimize:images',
-            'optimize:html',
+            //'optimize:images',
+            //'optimize:html',
             //'optmize:fonts:production',
         ],
         //'revision',
