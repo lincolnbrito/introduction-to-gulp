@@ -47,7 +47,7 @@ module.exports = {
         src:  srcAssets + '/scss/**/*.{sass,scss}',
         dest: developmentAssets + '/css',
         options: {
-            outputStyle: 'compressed',                    
+            outputStyle: 'expanded',                    
             includePaths : [srcAssets+'/scss/includes'] 
             /*noCache: true,
             compass: false,
