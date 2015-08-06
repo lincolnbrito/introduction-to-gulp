@@ -102,6 +102,15 @@ module.exports = {
             src:  developmentAssets + '/js/*.js',
             dest: productionAssets + '/js/',
             options: {}
+        },
+        images: {
+            src: developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
+            dest: productionAssets + '/images/',
+            options: {
+                optimizationLevel: 3,
+                progressive: true,
+                interlaced: true
+            }
         }
     }
 };
