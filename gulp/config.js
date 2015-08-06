@@ -97,6 +97,11 @@ module.exports = {
             options: {
                 keepSpecialComments: 0
             }
+        },
+        js: {
+            src:  developmentAssets + '/js/*.js',
+            dest: productionAssets + '/js/',
+            options: {}
         }
     }
 };
