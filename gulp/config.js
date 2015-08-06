@@ -90,7 +90,7 @@ module.exports = {
         sprites: srcAssets + '/images/**/*.png',
         svg:     'vectors/*.svg'
     },
-    optmize: {
+    optimize: {
         css: {
             src: developmentAssets + '/css/*.css',
             dest: productionAssets + '/css',

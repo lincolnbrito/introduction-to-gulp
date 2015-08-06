@@ -19,7 +19,7 @@ gulp.task('build:production', function(callback){
             //'optmize:fonts:production',
         ],
         'revision',
-        'rev:collect'
+        'rev:collect',
         callback
     );
 })
