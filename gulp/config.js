@@ -89,5 +89,14 @@ module.exports = {
         images:  srcAssets + '/images/**/*',
         sprites: srcAssets + '/images/**/*.png',
         svg:     'vectors/*.svg'
+    },
+    optmize: {
+        css: {
+            src: developmentAssets + '/css/*.css',
+            dest: productionAssets + '/css',
+            options: {
+                keepSpecialComments: 0
+            }
+        }
     }
 };
