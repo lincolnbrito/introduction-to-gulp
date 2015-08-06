@@ -10,16 +10,16 @@ gulp.task('build:production', function(callback){
             'images',
             //'copy:fonts'
         ],
-        'base64',
+        //'base64',
         [
-            'optmize:css',
+            'optimize:css',
             //'optmize:js',
-            'optmize:images',
-            'optmize:html',
+            'optimize:images',
+            'optimize:html',
             //'optmize:fonts:production',
         ],
-        'revision',
-        'rev:collect',
+        //'revision',
+        //'rev:collect',
         callback
     );
 })

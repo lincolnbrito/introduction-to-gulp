@@ -20,7 +20,7 @@ gulp.task('jekyll:production', function(done){
                 '-q', 
                 '-s'+config.src, 
                 '-d'+config.dest, 
-                '-c'+config.src+'/'+config.config
+                '-c'+config.config
             ], 
             { 
                 stdio: 'inherit' 
