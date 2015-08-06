@@ -111,6 +111,13 @@ module.exports = {
                 progressive: true,
                 interlaced: true
             }
+        },
+        html: {
+            src: productionAssets + '/**/*.html',
+            dest: production,
+            options: {
+                collapseWhitespace: true
+            }
         }
     }
 };
