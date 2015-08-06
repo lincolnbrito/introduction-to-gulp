@@ -70,7 +70,8 @@ module.exports = {
     },
     images: {
         src: srcAssets + '/images/**/*',
-        dest: developmentAssets + '/images'
+        dest: developmentAssets + '/images/',
+        dest_prod: productionAssets + '/images/'
     },
     watch: {
         jekyll: [
