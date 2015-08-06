@@ -14,7 +14,7 @@ gulp.task('build:production', function(callback){
         [
             'optimize:css',
             //'optmize:js',
-            //'optimize:images', // don't used for optimization on Windows because some dependencies instalation issues 
+            'optimize:images', // don't used for optimization on Windows because some dependencies instalation issues 
             'optimize:html'
             //'optmize:fonts:production',
         ],
