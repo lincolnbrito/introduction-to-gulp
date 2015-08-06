@@ -6,17 +6,17 @@ gulp.task('build:production', function(callback){
     reunSequence('delete', 'jekyll:production',
         [
             'sass',
-            'scripts',
+            //'scripts',
             'images',
-            'copy:fonts'
+            //'copy:fonts'
         ],
         'base64',
         [
             'optmize:css',
-            'optmize:js',
+            //'optmize:js',
             'optmize:images',
             'optmize:html',
-            'optmize:fonts:production',
+            //'optmize:fonts:production',
         ],
         'revision',
         'rev:collect'
