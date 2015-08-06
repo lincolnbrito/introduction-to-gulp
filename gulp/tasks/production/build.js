@@ -15,7 +15,7 @@ gulp.task('build:production', function(callback){
             'optimize:css',
             //'optmize:js',
             'optimize:images', // don't used for optimization on Windows because some dependencies instalation issues 
-            'optimize:html'
+            //'optimize:html' //problems with inline svg on sandwich menu
             //'optmize:fonts:production',
         ],
         //'revision',
