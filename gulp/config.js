@@ -36,6 +36,11 @@ module.exports = {
             src:    src,
             dest:   development,
             config: '_config.yml'
+        },
+        production: {
+            src: src,
+            dest: production,
+            config: '_config.yml,_config.build.yml'
         }
     },
     sass: {
