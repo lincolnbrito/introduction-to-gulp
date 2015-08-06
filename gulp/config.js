@@ -114,7 +114,7 @@ module.exports = {
             }
         },
         html: {
-            src: productionAssets + '/**/*.html',
+            src: production + '/**/*.html',
             dest: production,
             options: {
                 collapseWhitespace: true
